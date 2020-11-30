@@ -20,11 +20,14 @@ app.use(express.static("public"));
 // Mongoose connect (workout database)
 // https://mongoosejs.com/docs/deprecations.html
 // process.env.MONGODB_URI || <- removed from mongoose.connect()
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
-  useNewUrlParser: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/mighty-ravine-88971",
+  {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  }
+);
 
 // Routes
 app.use(require("./routes/api.js"));
